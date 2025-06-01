@@ -257,7 +257,7 @@ header('Expires: 0');
 </head>
 <body>
     <header>
-        <img src="https://j.top4top.io/p_32570kzgc3.png" alt="Logo">
+        <img src="https://j.top4top.io/p_3439mlb3e1.jpg" alt="Logo">
         ROOT LEAKD
     </header>
     <div class="container">
