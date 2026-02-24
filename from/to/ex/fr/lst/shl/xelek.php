@@ -187,7 +187,7 @@ $GLOBALS['__ALFA_COLOR__'] = array(
 				".foot" => "border-color: {color}",
 			)
 		),
-		"header_vars" => "#27979B",
+		"header_vars" => "#27FF00",
 		"header_values" => "#67ABDF",
 		"header_on" => "#FC0004",
 		"header_off" => "#ff0000",
@@ -223,7 +223,7 @@ $GLOBALS['__ALFA_COLOR__'] = array(
 		"header_show_all" => "#FC0004",
 		"disable_functions" => "#ff0000",
 		"footer_text" => "#FA5558",
-		"menu_options" => "#FA5558",
+		"menu_options" => "#25ff00",
 		"menu_options:hover" => array(
 			"key_color" => "#646464",
 			"multi_selector" => array(
